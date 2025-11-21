@@ -12,6 +12,7 @@
 
 </body>
 </html>
+-->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -19,72 +20,163 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kyoto, Japan - Favorite Destination</title>
-    <!-- Load Tailwind CSS for simple, clean styling -->
-    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Custom styles for clean list alignment */
-        .content-container {
+        /* Define consistent color variables */
+        :root {
+            --primary-color: #4f46e5; /* indigo-700 */
+            --text-dark: #1f2937; /* gray-800 */
+            --text-medium: #374151; /* gray-700 */
+            --bg-light: #f9fafb; /* gray-50 */
+            --bg-white: #ffffff;
+            
+            /* Highlight Colors */
+            --highlight-gold: #d97706; 
+            --highlight-orange: #f97316; 
+            --highlight-green: #059669; 
+            --highlight-red: #dc2626; 
+            --highlight-pink: #db2777; 
+            --highlight-blue: #1d4ed8; 
+            --highlight-lime: #65a30d; 
+            --highlight-red-dark: #7f1d1d; 
+            --highlight-purple: #8b5cf6; 
+        }
+
+        /* Body and main wrapper styling - Fixed padding */
+        body {
             font-family: 'Inter', sans-serif;
+            background-color: var(--bg-light);
+            min-height: 100vh;
+            padding: 2rem; /* Fixed padding */
         }
+        
+        /* Content Container Styling - Fixed width and padding */
+        .content-container {
+            max-width: 56rem; /* Fixed width (approx 896px) */
+            margin: 0 auto; /* Center the container */
+            background-color: var(--bg-white);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-xl */
+            border-radius: 0.5rem; 
+            padding: 2.5rem; /* Fixed large padding */
+        }
+        
+        /* H1 Heading Style - Fixed large size */
+        .content-container h1 {
+            font-size: 3rem; /* Fixed large size */
+            line-height: 1;
+            font-weight: 800; 
+            color: var(--primary-color);
+            margin-bottom: 0.5rem; 
+        }
+
+        /* Paragraph Style */
+        .content-container p {
+            color: var(--text-medium);
+            font-size: 1.125rem; 
+            line-height: 1.625; 
+            margin-bottom: 2.5rem; 
+        }
+
+        /* H2 Subheading Style */
+        .content-container h2 {
+            font-size: 1.875rem; 
+            line-height: 2.25rem;
+            font-weight: 600; 
+            color: var(--text-dark);
+            margin-bottom: 1rem; 
+            border-bottom: 1px solid #e5e7eb; 
+            padding-bottom: 0.5rem; 
+        }
+
+        /* List container style */
+        .list-section {
+            margin-bottom: 2.5rem; 
+        }
+
+        /* List Items (Ordered and Unordered) */
         ol, ul {
-            /* Ensures lists are indented correctly on all devices */
+            list-style-position: outside;
             padding-left: 1.5rem; 
+            font-size: 1.125rem; 
+            line-height: 1.75rem;
         }
+
+        ol {
+            list-style-type: decimal;
+        }
+
+        ul {
+            list-style-type: disc;
+        }
+        
+        ol li, ul li {
+            color: var(--text-dark);
+            margin-bottom: 0.75rem; 
+        }
+
+        /* Highlight Styles (Emphasized text) */
+        .highlight-gold { color: var(--highlight-gold); }
+        .highlight-orange { color: var(--highlight-orange); }
+        .highlight-green { color: var(--highlight-green); }
+        .highlight-red { color: var(--highlight-red); }
+        .highlight-pink { color: var(--highlight-pink); }
+        .highlight-blue { color: var(--highlight-blue); }
+        .highlight-lime { color: var(--highlight-lime); }
+        .highlight-red-dark { color: var(--highlight-red-dark); }
+        .highlight-purple { color: var(--highlight-purple); }
+
     </style>
 </head>
-<body class="bg-gray-50 min-h-screen p-4 sm:p-8">
-    <div class="content-container max-w-4xl mx-auto bg-white shadow-xl rounded-xl p-6 md:p-10">
+<body>
+    <div class="content-container">
 
         <!-- Heading (h1) with the name of the holiday destination -->
-        <h1 class="text-4xl md:text-5xl font-extrabold text-indigo-700 mb-2">
-            Kyoto, Japan
-        </h1>
+        <h1>Kyoto, Japan</h1>
         
         <!-- Line Break -->
         <br>
 
         <!-- Paragraph with a brief overview of the destination -->
-        <p class="text-gray-700 text-lg leading-relaxed mb-10">
+        <p>
             Kyoto, the ancient capital of Japan, is a city where tradition thrives amidst modern life. Famed for its thousands of classical Buddhist temples, imperial palaces, Shinto shrines, and traditional wooden machiya houses, it offers an unparalleled cultural immersion. It is a place of profound beauty, especially during the cherry blossom and autumn foliage seasons, offering a peaceful, timeless experience away from the hustle of contemporary metropolises.
         </p>
 
         <!-- Ordered List (ol): Top 5 Attractions -->
-        <div class="mb-10">
-            <h2 class="text-3xl font-semibold text-gray-800 mb-4 border-b pb-2">Top 5 Must-See Attractions</h2>
-            <ol class="list-decimal text-lg space-y-3 pl-6">
-                <li class="text-gray-800">
-                    Kinkaku-ji (The Golden Pavilion): A stunning Zen Buddhist temple covered in <strong class="text-yellow-600">brilliant gold leaf</strong>, reflecting beautifully on the surrounding pond.
+        <div class="list-section">
+            <h2>Top 5 Must-See Attractions</h2>
+            <ol>
+                <li>
+                    Kinkaku-ji (The Golden Pavilion): A stunning Zen Buddhist temple covered in <strong class="highlight-gold">brilliant gold leaf</strong>, reflecting beautifully on the surrounding pond.
                 </li>
-                <li class="text-gray-800">
-                    Fushimi Inari Shrine: Famous for its mesmerizing tunnel of <em class="text-orange-500">thousands of vibrant red torii gates</em> winding up the mountain.
+                <li>
+                    Fushimi Inari Shrine: Famous for its mesmerizing tunnel of <em class="highlight-orange">thousands of vibrant red torii gates</em> winding up the mountain.
                 </li>
-                <li class="text-gray-800">
-                    Arashiyama Bamboo Grove: Walking through this towering grove of bamboo is an <strong class="text-green-700">unforgettable, tranquil experience</strong>.
+                <li>
+                    Arashiyama Bamboo Grove: Walking through this towering grove of bamboo is an <strong class="highlight-green">unforgettable, tranquil experience</strong>.
                 </li>
-                <li class="text-gray-800">
-                    Kiyomizu-dera Temple: Known for its large wooden stage that juts out from the hillside, offering <em class="text-red-600">breathtaking panoramic views</em> of the city.
+                <li>
+                    Kiyomizu-dera Temple: Known for its large wooden stage that juts out from the hillside, offering <em class="highlight-red">breathtaking panoramic views</em> of the city.
                 </li>
-                <li class="text-gray-800">
-                    Gion District: Kyoto's most famous geisha district, where you can still spot geiko and maiko (apprentice geisha) on the historic streets, especially along <strong class="text-pink-600">Hanami-koji Street</strong>.
+                <li>
+                    Gion District: Kyoto's most famous geisha district, where you can still spot geiko and maiko (apprentice geisha) on the historic streets, especially along <strong class="highlight-pink">Hanami-koji Street</strong>.
                 </li>
             </ol>
         </div>
 
         <!-- Unordered List (ul): Must-Try Foods -->
         <div>
-            <h2 class="text-3xl font-semibold text-gray-800 mb-4 border-b pb-2">Must-Try Local Foods</h2>
-            <ul class="list-disc text-lg space-y-3 pl-6">
-                <li class="text-gray-800">
-                    <strong class="text-blue-700">Yudofu (Boiled Tofu)</strong>: A simple, elegant dish particularly famous in the Arashiyama area, showcasing the quality of Kyoto's water.
+            <h2>Must-Try Local Foods</h2>
+            <ul>
+                <li>
+                    <strong class="highlight-blue">Yudofu (Boiled Tofu)</strong>: A simple, elegant dish particularly famous in the Arashiyama area, showcasing the quality of Kyoto's water.
                 </li>
-                <li class="text-gray-800">
-                    <em class="text-lime-600">Matcha Sweets</em>: From creamy parfaits to bitter-sweet ice cream, Kyoto is the undisputed capital for high-quality green tea desserts.
+                <li>
+                    <em class="highlight-lime">Matcha Sweets</em>: From creamy parfaits to bitter-sweet ice cream, Kyoto is the undisputed capital for high-quality green tea desserts.
                 </li>
-                <li class="text-gray-800">
-                    <strong class="text-red-700">Kaiseki Ryōri</strong>: The traditional multi-course haute cuisine, often considered an <em class="text-red-900">art form</em>, representing seasonal ingredients perfectly.
+                <li>
+                    <strong class="highlight-red-dark">Kaiseki Ryōri</strong>: The traditional multi-course haute cuisine, often considered an <em class="highlight-red">art form</em>, representing seasonal ingredients perfectly.
                 </li>
-                <li class="text-gray-800">
-                    <em class="text-purple-700">Wagashi (Japanese Confectionery)</em>: Beautifully crafted sweets that change seasonally, often enjoyed with matcha tea.
+                <li>
+                    <em class="highlight-purple">Wagashi (Japanese Confectionery)</em>: Beautifully crafted sweets that change seasonally, often enjoyed with matcha tea.
                 </li>
             </ul>
         </div>
@@ -92,4 +184,3 @@
     </div>
 </body>
 </html>
- -->
